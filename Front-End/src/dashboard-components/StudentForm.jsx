@@ -26,9 +26,9 @@ const StudentForm = () => {
     teacher: [],
     guardianName: "",
     relation: "",
-    language: "",
+    // language: "",
     hearAboutUS: "",
-    underWhichTeacher: "",
+    // underWhichTeacher: "",
     studentDescription: "",
   });
 
@@ -50,9 +50,9 @@ const StudentForm = () => {
         teacher: existingStudent.teacher || [],
         guardianName: existingStudent.guardianName || "",
         relation: existingStudent.relation || "",
-        language: existingStudent.language || [],
+        // language: existingStudent.language || [],
         hearAboutUS: existingStudent.hearAboutUS || "",
-        underWhichTeacher: existingStudent.underWhichTeacher || "",
+        // underWhichTeacher: existingStudent.underWhichTeacher || "",
         studentDescription: existingStudent.studentDescription || "",
       });
     }

@@ -20,8 +20,6 @@ const signup = async (req, res) => {
       password,
       guardianName,
       relation,
-      language,
-      underWhichTeacher,
       studentDescription,
       hearAboutUS,
     } = req.body;
@@ -47,8 +45,6 @@ const signup = async (req, res) => {
       password: hashedPassword,
       guardianName,
       relation,
-      language,
-      underWhichTeacher,
       studentDescription,
       hearAboutUS,
     });

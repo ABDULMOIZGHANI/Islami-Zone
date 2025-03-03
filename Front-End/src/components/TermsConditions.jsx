@@ -25,7 +25,7 @@ const TermsConditions = () => {
         Please read Terms & Conditions for enrolled students
       </p>
       {conditions && (
-        <Conditions className="max:w-[650px] h-[100vh] bg-[#fff]">
+        <Conditions className="max:w-[650px]  bg-[#fff]">
           <div
             onClick={handleConditions}
             className="absolute right-[10px] top-[10px] cursor-pointer"
@@ -95,11 +95,9 @@ const Conditions = styled.div`
   border: 1px solid black;
   background-color: white;
   z-index: 1000; /* Ensure it appears above other content */
-  max-height: 100vh; /* Limit height to 80% of the viewport */
+  max-height: 90vh; /* Limit height to 80% of the viewport */
   overflow-y: auto; /* Add scroll if content exceeds height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
   @media (max-width: 520px) {
     width: 95%;
     height: auto;

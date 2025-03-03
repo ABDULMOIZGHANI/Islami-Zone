@@ -20,9 +20,9 @@ const Registration = () => {
     confirmPassword: "",
     guardianName: "",
     relation: "",
-    language: "",
+    // language: "",
     hearAboutUS: "",
-    underWhichTeacher: "",
+    // underWhichTeacher: "",
     studentDescription: "",
   });
 
@@ -33,9 +33,9 @@ const Registration = () => {
     if (type === "checkbox") {
       setFormData((prev) => ({
         ...prev,
-        language: checked
-          ? [...prev.language, value]
-          : prev.language.filter((lang) => lang !== value),
+        // language: checked
+        //   ? [...prev.language, value]
+        //   : prev.language.filter((lang) => lang !== value),
       }));
     } else {
       setFormData((prev) => ({
@@ -136,6 +136,38 @@ const Registration = () => {
               />
             </div>
             <br />
+
+            <h3 className="cinzel text-[20px] font-semibold text-[#171717] mb-[10px]">
+              Guardians Detail
+            </h3>
+            <div className="w-[100%] flex gap-[20px]">
+              <input
+                type="text"
+                placeholder="Guardian Name *"
+                name="guardianName"
+                required
+                onChange={handleChange}
+                className="w-full sm:w-[50%] border border-[#B7B7B7] rounded-[7px] px-[18px] py-[10px] poppins"
+              />
+
+              <select
+                name="relation"
+                value={formData.relation}
+                onChange={handleChange}
+                required
+                className="w-full sm:w-[50%] border border-[#B7B7B7] rounded-[7px] px-[18px] py-[10px] poppins"
+              >
+                <option value="" disabled>
+                  Relation with Student *
+                </option>
+                <option value="father">Father</option>
+                <option value="mother">Mother</option>
+                <option value="guardian">Guardian</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <br />
+
             <div className="w-[100%] flex gap-[20px]">
               <input
                 type="email"
@@ -210,39 +242,8 @@ const Registration = () => {
             </div>
             <br />
 
-            <h3 className="cinzel text-[20px] font-semibold text-[#171717] mb-[10px]">
-              Guardians Detail
-            </h3>
-            <div className="w-[100%] flex gap-[20px]">
-              <input
-                type="text"
-                placeholder="Guardian Name *"
-                name="guardianName"
-                required
-                onChange={handleChange}
-                className="w-full sm:w-[50%] border border-[#B7B7B7] rounded-[7px] px-[18px] py-[10px] poppins"
-              />
-
-              <select
-                name="relation"
-                value={formData.relation}
-                onChange={handleChange}
-                required
-                className="w-full sm:w-[50%] border border-[#B7B7B7] rounded-[7px] px-[18px] py-[10px] poppins"
-              >
-                <option value="" disabled>
-                  Relation with Student *
-                </option>
-                <option value="father">Father</option>
-                <option value="mother">Mother</option>
-                <option value="guardian">Guardian</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <br />
-
             {/* LANGUAGES */}
-            <div>
+            {/* <div>
               <h3 className="cinzel text-[20px] font-semibold text-[#171717] mb-[10px]">
                 Which Language(s) Do You Speak and Understand?
               </h3>
@@ -262,7 +263,7 @@ const Registration = () => {
                   </label>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* "Where did you hear about us?" Dropdown */}
             <div className="w-full max-w-md mb-6">
@@ -293,7 +294,7 @@ const Registration = () => {
 
             {/* STUDENT */}
             <div>
-              <h3 className="cinzel text-[20px] font-semibold text-[#171717] mb-[10px]">
+              {/* <h3 className="cinzel text-[20px] font-semibold text-[#171717] mb-[10px]">
                 You Studied Under Which Teacher?
               </h3>
               <div className="flex gap-4 mb-[10px]">
@@ -320,8 +321,9 @@ const Registration = () => {
                   <span className="text-lg font-medium text-[#171717]">
                     Female
                   </span>
-                </label>
-              </div>
+                </label> */}
+              {/* </div> */}
+
               <textarea
                 placeholder="Describe yourself as a Student"
                 required

@@ -1,3 +1,4 @@
+import BankList from "../components/BankList";
 import FeeStructure from "../components/FeeStructure";
 
 const Fee = () => {
@@ -5,7 +6,7 @@ const Fee = () => {
     <div className="space-y-12">
       {/* Course 1 - Basic Quran Course */}
       <FeeStructure
-        title="Fee Structure"
+        title="All Courses"
         plans={{
           A: {
             name: "Plan A",
@@ -112,6 +113,8 @@ const Fee = () => {
           },
         }}
       />
+
+      <BankList />
     </div>
   );
 };

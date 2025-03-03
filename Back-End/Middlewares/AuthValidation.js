@@ -17,8 +17,6 @@ const studentValidationSchema = Joi.object({
   confirmPassword: Joi.string().valid(Joi.ref("password")).required(),
   guardianName: Joi.string().min(3).max(50).required(),
   relation: Joi.string().min(3).max(50).required(),
-  language: Joi.array().items(Joi.string()).required(),
-  underWhichTeacher: Joi.string().required(),
   studentDescription: Joi.string().min(10).max(500).required(),
   hearAboutUS: Joi.string().required(),
 });

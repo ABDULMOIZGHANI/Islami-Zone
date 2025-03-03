@@ -51,10 +51,7 @@ const studentSignupSchema = new mongoose.Schema(
       type: [],
       required: true,
     },
-    underWhichTeacher: {
-      type: String,
-      required: true,
-    },
+
     studentDescription: {
       type: String,
     },
