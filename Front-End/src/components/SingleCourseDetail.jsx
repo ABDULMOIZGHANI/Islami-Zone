@@ -18,7 +18,7 @@ const SingleCourseDetail = () => {
   // console.log(course);
 
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <LeftStars src="/courses/Lstars.png" alt="" />
       <RightStars src="/courses/Stars.png" alt="" />
       {!course ? (
@@ -29,13 +29,13 @@ const SingleCourseDetail = () => {
             {course.title}
           </h1>
           <p className="text-[18px] text-[#171717] poppins text-center mb-[80px]">
-            {course.definition}////
+            {course.definition}
           </p>
 
           <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]}>
             {course.detail}
           </ReactMarkdown>
-          <div className="flex justify-center mb-[50px] h-[200px]">
+          <div className="flex justify-center mb-[50px] h-[300px]">
             <img src={course.img} alt={course.title} className="block center" />
           </div>
           <h2 className="text-center cinzel text-4xl font-bold pb-[50px]">
@@ -50,22 +50,6 @@ const SingleCourseDetail = () => {
           <p className="text-[18px] text-[#171717] poppins text-center mb-[80px]">
             {course.ImportanceHeading}
           </p>
-
-          {/* <h1 className="text-center cinzel text-4xl font-bold pt-[60px] pb-[50px]">
-            {course.title}
-          </h1>
-          <ReactMarkdown>{course.detail}</ReactMarkdown>
-          <div className="flex justify-center mb-[50px] h-[200px]">
-            <img src={course.img} alt={course.title} className="block center" />
-          </div>
-          <h2 className="text-center cinzel text-4xl font-bold pb-[50px]">
-            {course.whatYouLearn_Title}
-          </h2>
-          <ReactMarkdown>{course.whatYouLearn_Detail}</ReactMarkdown>
-          <h2 className="text-center cinzel text-4xl font-bold pb-[50px]">
-            {course.importanceTitle}
-          </h2>
-          <ReactMarkdown>{course.ImportanceHeading}</ReactMarkdown> */}
 
           <div className="flex flex-col items-center mb-[30px]">
             <h1 className="text-center cinzel text-4xl font-bold  pb-[50px]">
@@ -84,7 +68,7 @@ const SingleCourseDetail = () => {
           </div>
         </div>
       )}
-
+      <RightStar src="/sectionImages/RightStar.png" alt="" />
       <MainSection />
     </div>
   );
@@ -110,4 +94,12 @@ const RightStars = styled.img`
     /* display: none; */
     width: 80px;
   }
+`;
+
+const RightStar = styled.img`
+  position: absolute;
+  right: -90px;
+  top: 110vh;
+  z-index: -1;
+  opacity: 0.9;
 `;
