@@ -8,6 +8,7 @@ const AddCourse = () => {
     img: "",
     mainImg: "",
     title: "",
+    definition: "",
     detail: "",
     whatYouLearn_Title: "",
     whatYouLearn_Detail: "",
@@ -39,6 +40,7 @@ const AddCourse = () => {
         img: "",
         mainImg: "",
         title: "",
+        definition: "",
         detail: "",
         whatYouLearn_Title: "",
         whatYouLearn_Detail: "",
@@ -111,6 +113,18 @@ const AddCourse = () => {
           required
           className="w-[100%] border border-[#B7B7B7] rounded-[7px] px-[18px] py-[10px] poppins"
         />
+        <br />
+
+        {/* Course Detail */}
+        <textarea
+          name="definition"
+          placeholder="Define the course *"
+          value={formData.definition}
+          onChange={handleChange}
+          required
+          rows="5"
+          className="w-[100%] border border-[#B7B7B7] rounded-[7px] px-[18px] py-[10px] poppins"
+        ></textarea>
         <br />
 
         {/* Course Detail */}

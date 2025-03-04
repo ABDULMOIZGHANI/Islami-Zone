@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Menu = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen((prev) => !prev);
+  };
   return (
     <menu className="md:bg-[#246545]">
       <ul className="md:flex-row flex flex-col items-center justify-between md:w-[85%] w-[100%] max-w-[1450px] m-auto h-[500px] md:h-[60px]">
@@ -13,7 +18,9 @@ const Menu = () => {
         <Link to="/about-us">
           <MenuList>ABOUT</MenuList>
         </Link>
-        <MenuList className="relative group flex h-[60px] items-center">
+
+        {/* COURSES OPTION FOR DESKTOP */}
+        <MenuList className="relative group hidden md:flex h-[60px] items-center">
           COURSES <FaAngleDown className="ml-2 mt-[-3px] " />
           <Dropdown className="group-hover:block">
             <Link to="/courses/courses-for-childrens">
@@ -42,6 +49,42 @@ const Menu = () => {
             </DropdownItem>
           </Dropdown>
         </MenuList>
+
+        {/* COURSES OPTION FOR MOBILE */}
+        <MenuListMobile
+          onClick={toggleDropdown}
+          className="relative group flex md:hidden h-[60px] items-center"
+        >
+          <Link to="/courses/AllCourses">ALL COURSES</Link>
+          {/* <FaAngleDown className="ml-2 mt-[-3px] " /> */}
+          {/* <Dropdown className="group-hover:block">
+            <Link to="/courses/courses-for-childrens">
+              <DropdownItem>Courses for Children</DropdownItem>
+            </Link>
+
+            <Link to="/courses/courses-for-adults">
+              <DropdownItem>Courses for Adults</DropdownItem>
+            </Link>
+
+            <Link to="/courses/courses-for-females">
+              <DropdownItem>Courses for Females</DropdownItem>
+            </Link>
+            <DropdownItem className="relative group flex">
+              <Link to="/courses/AllCourses" className="flex">
+                All Courses
+                <FaAngleDown className="ml-2 text-xs mt-[5px]" />
+              </Link>
+              <SubDropdown className="group-hover:block">
+                <Link to="/course-detail/Qaida%20For%20Beginners">
+                  <DropdownItem>Qaida For Beginners</DropdownItem>
+                </Link>
+                <DropdownItem>Quran Memorization</DropdownItem>
+                <DropdownItem>Tafseer e Quran</DropdownItem>
+              </SubDropdown>
+            </DropdownItem>
+          </Dropdown> */}
+        </MenuListMobile>
+
         <Link to="/faqs">
           <MenuList>FAQs</MenuList>
         </Link>
@@ -76,6 +119,22 @@ const MenuList = styled.li`
     color: #e2e2e2;
     transition: all 0.4s ease-in-out;
   }
+
+  @media (max-width: 768px) {
+    color: black;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+`;
+
+const MenuListMobile = styled.li`
+  font-family: "Poppins";
+  font-size: 17px;
+  font-weight: 500;
+  color: #f9f9f9;
+  cursor: pointer;
+  position: relative;
 
   @media (max-width: 768px) {
     color: black;

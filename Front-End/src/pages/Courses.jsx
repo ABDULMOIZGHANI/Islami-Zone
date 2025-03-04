@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useCoursesContext } from "../context/courseContext";
 import Button from "../components/Button";
 import { Link, useParams } from "react-router-dom";
+import Spinner from "../components/Spinner";
 
 const Courses = () => {
   const { isLoading, allCourses } = useCoursesContext();
@@ -37,38 +38,39 @@ const Courses = () => {
 
         {!filteredCourses.length ? (
           <div className="text-center cinzel text-[20px] text-[#171717]">
-            No Course Found
+            <Spinner />
           </div>
         ) : (
           <div className="flex justify-between gap-[10px] flex-wrap mb-[40px] flex-col md:flex-row">
-            {isLoading
-              ? "...LOADING"
-              : filteredCourses.map((course) => (
-                  <div
-                    key={course._id}
-                    className="md:w-[30%] mb-[20px] bg-[#D8D8D8] shadow text-center flex flex-col gap-3 p-[20px] rounded-t-[20px] rounded-br-[20px]"
-                  >
-                    <img
-                      className="block center"
-                      src={course.img}
-                      alt={course.title}
-                    />
-                    <h2 className="cinzel font-bold text-[20px] text-[#171717]">
-                      {course.title}
-                    </h2>
-                    <p className="poppins text-[15px] text-[#171717] font-light">
-                      {course.detail.slice(0, 203)}...
-                    </p>
-                    <div className="mt-[10px]">
-                      <Link to={`/course-detail/${course.title}`}>
-                        <Button value="Read More" {...course} />
-                      </Link>
-                    </div>
+            {isLoading ? (
+              <Spinner />
+            ) : (
+              filteredCourses.map((course) => (
+                <div
+                  key={course._id}
+                  className="md:w-[30%] mb-[20px] glassyBG shadow text-center flex flex-col gap-3 p-[20px] rounded-t-[20px] rounded-br-[20px]"
+                >
+                  <div className="flex justify-center bg-[#fff] rounded-[12px] py-[30px]">
+                    <img src={course.img} alt={course.title} />
                   </div>
-                ))}
+                  <h2 className="cinzel font-bold text-[20px] text-[#171717]">
+                    {course.title}
+                  </h2>
+                  <p className="poppins text-[15px] text-[#171717] font-light">
+                    {course.definition.slice(0, 203)}...
+                  </p>
+                  <div className="mt-[10px]">
+                    <Link to={`/course-detail/${course.title}`}>
+                      <Button value="Read More" {...course} />
+                    </Link>
+                  </div>
+                </div>
+              ))
+            )}
           </div>
         )}
       </section>
+      <RightStar src="./sectionImages/RightStar.png" alt="" />
     </div>
   );
 };
@@ -93,4 +95,11 @@ const RightStars = styled.img`
     /* display: none; */
     width: 80px;
   }
+`;
+
+const RightStar = styled.img`
+  position: absolute;
+  right: -50px;
+  top: 110vh;
+  z-index: -1;
 `;

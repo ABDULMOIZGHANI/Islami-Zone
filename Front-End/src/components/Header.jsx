@@ -146,7 +146,7 @@ const Header = () => {
 
       {/* Mobile Full-Screen Menu */}
       {isMenuOpen && (
-        <div className="fixed glassyBG bg-opacity-80 z-50 flex flex-col items-center justify-center text-white h-auto p-12 w-[90%] left-[5%] top-2.5">
+        <div className="fixed glassyBG z-50 flex flex-col items-center justify-center text-white h-auto p-12 w-[90%] left-[5%] top-2.5">
           {/* Close Button */}
           <button
             className="absolute top-5 right-5"

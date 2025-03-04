@@ -4,6 +4,10 @@ import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import Button from "./Button";
 import MainSection from "./MainSection";
+import Spinner from "./Spinner";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import remarkBreaks from "remark-breaks";
 
 const SingleCourseDetail = () => {
   const { isLoading, allCourses } = useCoursesContext();
@@ -11,22 +15,27 @@ const SingleCourseDetail = () => {
 
   // Find the course by its ID or title
   const course = allCourses.find((course) => course.title === id);
+  // console.log(course);
 
   return (
     <div className="relative">
       <LeftStars src="/courses/Lstars.png" alt="" />
       <RightStars src="/courses/Stars.png" alt="" />
       {!course ? (
-        "LOADING"
+        <Spinner />
       ) : (
         <div className="p-4 md:w-[85%] max-w-[1450px] m-auto">
           <h1 className="text-center cinzel text-4xl font-bold pt-[60px] pb-[50px]">
             {course.title}
           </h1>
           <p className="text-[18px] text-[#171717] poppins text-center mb-[80px]">
-            {course.detail}
+            {course.definition}////
           </p>
-          <div className="flex justify-center">
+
+          <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]}>
+            {course.detail}
+          </ReactMarkdown>
+          <div className="flex justify-center mb-[50px] h-[200px]">
             <img src={course.img} alt={course.title} className="block center" />
           </div>
           <h2 className="text-center cinzel text-4xl font-bold pb-[50px]">
@@ -41,6 +50,22 @@ const SingleCourseDetail = () => {
           <p className="text-[18px] text-[#171717] poppins text-center mb-[80px]">
             {course.ImportanceHeading}
           </p>
+
+          {/* <h1 className="text-center cinzel text-4xl font-bold pt-[60px] pb-[50px]">
+            {course.title}
+          </h1>
+          <ReactMarkdown>{course.detail}</ReactMarkdown>
+          <div className="flex justify-center mb-[50px] h-[200px]">
+            <img src={course.img} alt={course.title} className="block center" />
+          </div>
+          <h2 className="text-center cinzel text-4xl font-bold pb-[50px]">
+            {course.whatYouLearn_Title}
+          </h2>
+          <ReactMarkdown>{course.whatYouLearn_Detail}</ReactMarkdown>
+          <h2 className="text-center cinzel text-4xl font-bold pb-[50px]">
+            {course.importanceTitle}
+          </h2>
+          <ReactMarkdown>{course.ImportanceHeading}</ReactMarkdown> */}
 
           <div className="flex flex-col items-center mb-[30px]">
             <h1 className="text-center cinzel text-4xl font-bold  pb-[50px]">

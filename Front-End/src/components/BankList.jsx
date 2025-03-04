@@ -18,13 +18,13 @@ const banks = [
     swiftCode: "MUCBPKKA",
   },
   {
-    logo: "/sectionImages/MCB.jpeg",
-    title: "ISLAMI ZONE",
-    accountNo: "1445134071004339",
-    iban: " PK90MUCB1445134071004339",
-    branch: " KARACHI JAMSHED ROAD KARACHI SINDH PAKISTAN",
-    branchNo: "1247",
-    swiftCode: "MUCBPKKA",
+    logo: "/sectionImages/DUBAI_ISLAMIC.jpeg",
+    title: "RIZWAN FAREED",
+    accountNo: "0505664001",
+    iban: " PK91DUIB0000000505664001",
+    branch: " ISLAMIA COLLEGE ROAD BRANCH KARACHI",
+    branchNo: "101",
+    swiftCode: "DUIB PKKA",
   },
 ];
 

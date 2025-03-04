@@ -177,7 +177,7 @@
 }
 
 .glassyBG {
-    backdrop-filter: blur(10px) saturate(200%);
+    backdrop-filter: blur(10px) saturate(200%) !important;
     -webkit-backdrop-filter: blur(10px) saturate(200%);
     background-color: rgba(216, 216, 216, 0.49);
     border-radius: 12px;
