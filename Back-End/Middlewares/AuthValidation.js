@@ -3,7 +3,7 @@ import Joi from "joi";
 const studentValidationSchema = Joi.object({
   name: Joi.string().min(3).max(50).required(),
   email: Joi.string().email().required(),
-  gender: Joi.string().valid("male", "female").required(),
+  gender: Joi.string().valid("male", "female", "Male", "Female").required(),
   age: Joi.number().integer().min(4).max(100).required(),
   country: Joi.string().required(),
   chooseCourse: Joi.string().required(),
@@ -24,7 +24,7 @@ const studentValidationSchema = Joi.object({
 const teacherValidationSchema = Joi.object({
   name: Joi.string().min(3).max(50).required(),
   email: Joi.string().email().required(),
-  gender: Joi.string().valid("male", "female").required(),
+  gender: Joi.string().valid("male", "female", "Male", "Female").required(),
   age: Joi.number().integer().min(18).max(100).required(), // Teachers should be at least 18+
   country: Joi.string().required(),
   phoneNumber: Joi.string()
