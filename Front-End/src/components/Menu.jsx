@@ -40,11 +40,21 @@ const Menu = () => {
                 <FaAngleDown className="ml-2 text-xs mt-[5px]" />
               </Link>
               <SubDropdown className="group-hover:block">
-                <Link to="/course-detail/Qaida%20For%20Beginners">
+                <Link to="/course-detail/Qaida%20for%20Beginners">
                   <DropdownItem>Qaida For Beginners</DropdownItem>
                 </Link>
-                <DropdownItem>Quran Memorization</DropdownItem>
-                <DropdownItem>Tafseer e Quran</DropdownItem>
+                <Link to="/course-detail/Quran%20Memorization">
+                  <DropdownItem>Quran Memorization</DropdownItem>
+                </Link>
+                <Link to="/course-detail/Tafseer-e-Quran">
+                  <DropdownItem>Tafseer e Quran</DropdownItem>
+                </Link>
+                <Link to="/course-detail/Quran%20Recitation">
+                  <DropdownItem>Quran Recitation</DropdownItem>
+                </Link>
+                <Link to="/course-detail/Salaat%20and%20Dua">
+                  <DropdownItem>Salaat and Dua</DropdownItem>
+                </Link>
               </SubDropdown>
             </DropdownItem>
           </Dropdown>

@@ -3,12 +3,15 @@ import styled from "styled-components";
 import Button from "./Button";
 import axios from "axios";
 import { handleSuccess } from "./utils";
+import { useLocation } from "react-router-dom";
 
 const FeedbackForm = () => {
   const [userName, setName] = useState("");
   const [email, setEmail] = useState("");
   const [country, setCountry] = useState("");
   const [message, setMessage] = useState("");
+
+  const location = useLocation(); //
 
   const Submit = (e) => {
     e.preventDefault();
@@ -26,7 +29,11 @@ const FeedbackForm = () => {
         setEmail("");
         setCountry("");
         setMessage("");
-        handleSuccess("Thank For your Feedback");
+        if (location.pathname === "/contact-us") {
+          handleSuccess("Your message has been sent!"); // For Contact Page
+        } else {
+          handleSuccess("Thank you for your feedback!"); // For Other Pages
+        }
       })
       .catch((err) => console.log("ERROR", err));
   };
