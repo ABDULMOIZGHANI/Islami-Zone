@@ -107,7 +107,7 @@ const Registration = () => {
             <input
               type="text"
               name="name"
-              placeholder="Enter Your Full Name *"
+              placeholder="Full Name *"
               required
               onChange={handleChange}
               className="w-[100%] border border-[#B7B7B7] rounded-[7px] pr-[15px] pl-[18px] pt-[10px] pb-[10px] poppins"
@@ -117,7 +117,7 @@ const Registration = () => {
               <input
                 type="text"
                 name="gender"
-                placeholder="Enter Your Gender *"
+                placeholder="Gender *"
                 required
                 onChange={handleChange}
                 className="w-[50%] border border-[#B7B7B7] rounded-[7px] pr-[15px] pl-[18px] pt-[10px] pb-[10px] poppins"
@@ -125,7 +125,7 @@ const Registration = () => {
               <input
                 type="number"
                 name="age"
-                placeholder="Enter Your Age *"
+                placeholder="Age *"
                 required
                 className="w-[50%] border border-[#B7B7B7] rounded-[7px] pr-[15px] pl-[18px] pt-[10px] pb-[10px] poppins"
                 onChange={handleChange}
@@ -174,7 +174,7 @@ const Registration = () => {
             <div className="w-[100%] flex gap-[20px]">
               <input
                 type="number"
-                placeholder="Enter Your CNIC Number *"
+                placeholder="CNIC Number *"
                 name="CNIC"
                 required
                 className="w-[50%] border border-[#B7B7B7] rounded-[7px] pr-[15px] pl-[18px] pt-[10px] pb-[10px] poppins"
@@ -182,7 +182,7 @@ const Registration = () => {
               />
               <input
                 type="number"
-                placeholder="Years of Experience *"
+                placeholder="Experience *"
                 name="experience"
                 autoComplete="new-password"
                 required
@@ -249,6 +249,7 @@ const Registration = () => {
                 id="source"
                 onChange={handleChange}
                 name="hearAboutUS"
+                value={formData.hearAboutUS}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="" disabled>

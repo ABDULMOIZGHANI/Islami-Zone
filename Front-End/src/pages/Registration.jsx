@@ -111,7 +111,7 @@ const Registration = () => {
             <input
               type="text"
               name="name"
-              placeholder="Enter Your Name *"
+              placeholder="Full Name *"
               required
               onChange={handleChange}
               className="w-[100%] border border-[#B7B7B7] rounded-[7px] pr-[15px] pl-[18px] pt-[10px] pb-[10px] poppins"
@@ -121,7 +121,7 @@ const Registration = () => {
               <input
                 type="text"
                 name="gender"
-                placeholder="Enter Your Gender*"
+                placeholder="Gender*"
                 required
                 onChange={handleChange}
                 className="w-[50%] border border-[#B7B7B7] rounded-[7px] pr-[15px] pl-[18px] pt-[10px] pb-[10px] poppins"
@@ -129,7 +129,7 @@ const Registration = () => {
               <input
                 type="number"
                 name="age"
-                placeholder="Enter Your Age*"
+                placeholder="Age*"
                 required
                 className="w-[50%] border border-[#B7B7B7] rounded-[7px] pr-[15px] pl-[18px] pt-[10px] pb-[10px] poppins"
                 onChange={handleChange}
@@ -232,7 +232,7 @@ const Registration = () => {
             <div className="w-[100%] flex gap-[20px]">
               <input
                 type="text"
-                placeholder="Enter Your Course Name *"
+                placeholder="Course Name *"
                 name="chooseCourse"
                 autoComplete="new-password"
                 required
@@ -269,22 +269,23 @@ const Registration = () => {
             <div className="w-full max-w-md mb-6">
               <label
                 htmlFor="source"
-                className="block text-lg font-medium text-[#171717] mb-2"
+                className="block text-lg font-medium cinzel text-[#171717] mb-2"
               >
                 Where did you hear about us?
               </label>
               <select
                 id="source"
-                onChange={handleChange}
                 name="hearAboutUS"
+                value={formData.hearAboutUS}
+                onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="" disabled>
                   Select an option
                 </option>
-                <option value="Social Media">Facebook</option>
-                <option value="Social Media">Youtube</option>
-                <option value="Social Media">Instagram</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Youtube">Youtube</option>
+                <option value="Instagram">Instagram</option>
                 <option value="Friend or Family">Friend or Family</option>
                 <option value="Advertisement">Advertisement</option>
                 <option value="Google Search">Google Search</option>

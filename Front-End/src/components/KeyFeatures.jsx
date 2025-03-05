@@ -6,7 +6,6 @@ const KeyFeatures = () => {
       <h1 className="text-center cinzel text-4xl font-bold pt-[50px] pb-[50px]">
         Key Features of Our Islami Zone
       </h1>
-
       <div className="w-[90%] md:w-[85%] max-w-[1450px] m-auto text-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[10px] auto-rows-fr">
         {features.map((feature, i) => (
           <div
@@ -22,6 +21,28 @@ const KeyFeatures = () => {
             </p>
           </div>
         ))}
+      </div>
+
+      <div className="w-[90%] md:w-[85%] max-w-[1450px] m-auto text-center ">
+        <h1 className="text-center cinzel text-4xl font-bold pt-[50px] pb-[50px]">
+          Qualified Male & Female Quran Teachers at Islami Zone
+        </h1>{" "}
+        <p className="text-[18px] text-[#171717] poppins text-center">
+          At Islami Zone, we are committed to providing quality Quran education
+          to students worldwide. We offer highly qualified and experienced male
+          and female teachers to ensure that every student feels comfortable and
+          engaged in their learning journey. Whether you are a beginner or
+          looking to advance your Quranic knowledge, our teachers are dedicated
+          to guiding you with Tajweed, Tafseer, and Islamic studies in an
+          interactive and supportive environment.
+        </p>
+        <div className="">
+          <img
+            src="/AboutUs/MALE_FEMALE_TEACHERS.png"
+            alt=""
+            className="md:w-[612px] w-[85%] m-auto mt-16"
+          />
+        </div>
       </div>
     </section>
   );

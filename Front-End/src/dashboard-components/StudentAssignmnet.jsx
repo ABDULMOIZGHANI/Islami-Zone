@@ -51,7 +51,7 @@ const StudentAssignment = () => {
     const { value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      assignment: value.split(",").map((item) => item.trim()),
+      assignment: value.split(","),
     }));
   };
 
@@ -97,7 +97,7 @@ const StudentAssignment = () => {
           <input
             type="text"
             name="assignment"
-            value={formData.assignment.join(", ")}
+            value={formData.assignment}
             placeholder="Enter Assignment Subjects *"
             required
             onChange={handleAssignmentChange}

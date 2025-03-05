@@ -50,7 +50,7 @@ const Home = () => {
             <h2 className="cinzel font-bold text-[20px] text-[#171717]">
               All Teachers
             </h2>
-            <h2 className="cinzel font-bold text-[20px] text-[#171717]">10+</h2>
+            <h2 className="cinzel font-bold text-[20px] text-[#171717]">35+</h2>
           </div>
 
           <p className="poppins text-[#555] text-sm mt-2">
@@ -63,7 +63,7 @@ const Home = () => {
             <h2 className="cinzel font-bold text-[20px] text-[#171717]">
               All Students
             </h2>
-            <h2 className="cinzel font-bold text-[20px] text-[#171717]">35+</h2>
+            <h2 className="cinzel font-bold text-[20px] text-[#171717]">60+</h2>
           </div>
 
           <p className="poppins text-[#555] text-sm mt-2">
@@ -76,9 +76,7 @@ const Home = () => {
             <h2 className="cinzel font-bold text-[20px] text-[#171717]">
               All Courses
             </h2>
-            <h2 className="cinzel font-bold text-[20px] text-[#171717]">
-              100+
-            </h2>
+            <h2 className="cinzel font-bold text-[20px] text-[#171717]">20+</h2>
           </div>
 
           <p className="poppins text-[#555] text-sm mt-2">

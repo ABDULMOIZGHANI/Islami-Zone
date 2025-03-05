@@ -47,7 +47,7 @@ const FeedbackForm = () => {
       />
       <MainBox>
         <h1 className="text-center cinzel text-4xl font-bold pt-[80px] pb-[50px]">
-          Get in Touch with Us
+          {location.pathname !== "/contact-us" ? "We Value Your Feedback" : ""}
         </h1>
         <form
           action=""

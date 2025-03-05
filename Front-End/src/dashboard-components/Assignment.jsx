@@ -72,12 +72,12 @@ const Assignment = () => {
                   {/* Table 1: Students Assigned to the Teacher */}
                   <table className="w-full mb-8 overflow-x-auto">
                     <thead>
-                      <tr className="bg-gray-200">
+                      <tr className="bg-gray-200 text-left">
                         <th className="p-3">Name</th>
                         <th className="p-3">Days</th>
                         <th className="p-3">Timing</th>
                         <th className="p-3">Course</th>
-                        <th className="p-3">Action</th>
+                        <th className="p-3">Add Lesson</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -172,7 +172,7 @@ const Assignment = () => {
               </tr>
             </thead>
             <tbody>
-              {currentStudent.days?.map((day, index) => (
+              {currentStudent.assignment?.map((day, index) => (
                 <tr key={index} className="border-t border-gray-300">
                   <td className="p-3">
                     {currentStudent.assignment[index] || "N/A"}
