@@ -46,9 +46,11 @@ const Footer = () => {
                 className="flex gap-[14px] items-center mb-[23px]"
               >
                 <i className="fa-solid fa-chevron-right text-[12px]"></i>
-                <p className="poppins text-[16px] text-[#f9f9f9]">
-                  {val.value}
-                </p>
+                <Link to={val.link}>
+                  <p className="poppins text-[16px] text-[#f9f9f9]">
+                    {val.value}
+                  </p>
+                </Link>
               </div>
             ))}
           </div>
@@ -71,7 +73,7 @@ const Footer = () => {
 
           <div className="About">
             <h2 className="cinzel text-[26px] font-bold mb-6">
-              Courses Category
+              Contact Details
             </h2>
             {Contacts.map((val, i) => (
               <div key={i} className="flex gap-[14px] items-center mb-[23px]">

@@ -112,7 +112,7 @@ const StudentForm = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:8008/students/update/${id}`,
+        `https://isami-zone-project.onrender.com/students/update/${id}`,
         formData
       );
 

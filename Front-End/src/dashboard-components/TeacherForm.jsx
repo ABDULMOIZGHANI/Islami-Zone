@@ -94,7 +94,7 @@ const TeacherForm = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:8008/teacher/update/${id}`,
+        `https://isami-zone-project.onrender.com/teacher/update/${id}`,
         formData
       );
 

@@ -9,7 +9,7 @@ const ApprovedFeedbacks = () => {
   // console.log("all testimonials", allTestimonialData);
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:8008/deleteTestimonial/" + id)
+      .delete("https://isami-zone-project.onrender.com/deleteTestimonial/" + id)
       .then((res) => {
         window.location.reload();
       })
@@ -19,7 +19,7 @@ const ApprovedFeedbacks = () => {
   const handleApprove = async (id) => {
     try {
       const response = await axios.put(
-        "http://localhost:8008/approve-testimonial/" + id
+        "https://isami-zone-project.onrender.com/approve-testimonial/" + id
       );
     } catch (error) {
       console.error("Error approving testimonial:", error);

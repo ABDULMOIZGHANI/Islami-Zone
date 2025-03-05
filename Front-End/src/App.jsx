@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Outlet />
       <Footer />
-      <Link to="https://wa.me/+923048725311">
+      <Link to="https://wa.me/+447770474526">
         <WhatsApp src="/sectionImages/whatsapp.png" alt="WhatsApp Icon" />
       </Link>
     </>

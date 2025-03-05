@@ -11,7 +11,7 @@ const AllTeachers = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:8008/deleteTeacher/" + id)
+      .delete("https://isami-zone-project.onrender.com/deleteTeacher/" + id)
       .then((res) => {
         console.log(res);
         window.location.reload();

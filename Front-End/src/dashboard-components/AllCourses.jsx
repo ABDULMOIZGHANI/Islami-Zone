@@ -9,7 +9,7 @@ const AllCourses = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:8008/coursedelete/" + id)
+      .delete("https://isami-zone-project.onrender.com/coursedelete/" + id)
       .then((res) => {
         console.log(res);
         window.location.reload();

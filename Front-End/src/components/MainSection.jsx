@@ -13,7 +13,11 @@ const MainSection = () => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:8008/free-trial", { userName, email, number })
+      .post("https://isami-zone-project.onrender.com/free-trial", {
+        userName,
+        email,
+        number,
+      })
       .then((result) => {
         setName("");
         setEmail("");

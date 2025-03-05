@@ -14,7 +14,7 @@ const FeedbackForm = () => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:8008/testimonial", {
+      .post("https://isami-zone-project.onrender.com/testimonial", {
         userName,
         email,
         country,

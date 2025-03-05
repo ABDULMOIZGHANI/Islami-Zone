@@ -26,13 +26,16 @@ const AddCourse = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8008/addCourses", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://isami-zone-project.onrender.com/addCourses",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       // Optionally reset the form after successful submission
       setFormData({

@@ -26,7 +26,10 @@ const Courses = () => {
       <RightStars src="/courses/Stars.png" alt="" />
       <section className="w-[90%] md:w-[85%] m-auto max-w-[1450px]">
         <h1 className="text-center cinzel text-4xl font-bold pt-[60px] pb-[50px]">
-          Our Courses
+          {courseName === "courses-for-childrens" && "Courses For Childrens"}
+          {courseName === "courses-for-adults" && "Courses For Adults"}
+          {courseName === "courses-for-females" && "Courses For Females"}
+          {courseName === "AllCourses" && "All Courses"}
         </h1>
         <p className="text-[18px] text-[#171717] poppins text-center mb-[80px]">
           Welcome to the Courses section of Islami Zone, your trusted

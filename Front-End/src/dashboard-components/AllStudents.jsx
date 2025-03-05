@@ -11,7 +11,7 @@ const AllStudents = () => {
   // console.log("ALL STUDENTS", allStudentsData);
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:8008/deleteUser/" + id)
+      .delete("https://isami-zone-project.onrender.com/deleteUser/" + id)
       .then((res) => {
         console.log(res);
         window.location.reload();

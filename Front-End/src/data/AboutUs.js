@@ -20,18 +20,23 @@ export const AboutUs = [
 export const Courses = [
   {
     value: "Qaida For Beginners",
+    link: "/course-detail/Qaida%20for%20Beginners",
   },
   {
     value: "Quran Memorization ",
+    link: "/course-detail/Quran%20Memorization",
   },
   {
     value: "Quran with Tajweed",
+    link: "/course-detail/Quran%20with%20Tajweed%20&%20Tarteel",
   },
   {
     value: "Tafseer e Quran",
+    link: "/course-detail/Tafseer-e-Quran",
   },
   {
     value: "Quran Recitation",
+    link: "/course-detail/Quran%20Recitation",
   },
 ];
 

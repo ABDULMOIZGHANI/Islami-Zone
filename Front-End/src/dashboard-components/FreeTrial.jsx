@@ -11,7 +11,7 @@ const FreeTrial = () => {
     // console.log("ID:", id);
 
     axios
-      .delete("http://localhost:8008/free-trial/" + id)
+      .delete("https://isami-zone-project.onrender.com/free-trial/" + id)
       .then((res) => {
         console.log(res);
         window.location.reload();

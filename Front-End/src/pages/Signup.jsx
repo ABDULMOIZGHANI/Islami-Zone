@@ -54,7 +54,7 @@ const Registration = () => {
   const sendToBackend = async (data) => {
     try {
       const response = await fetch(
-        "http://localhost:8008/auth/signup/teacher",
+        "https://isami-zone-project.onrender.com/auth/signup/teacher",
         {
           method: "POST",
           headers: {

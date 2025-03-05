@@ -3,11 +3,11 @@ import axios from "axios";
 import CoursesReducer from "../reducers/CoursesReducer";
 
 const AppContext = createContext();
-const courseAPI = "http://localhost:8008/all-courses";
-const allStudents = "http://localhost:8008/all-students";
-const testimonialsURL = "http://localhost:8008/testimonials";
-const allTeachers = "http://localhost:8008/all-teachers";
-const freeTrials = "http://localhost:8008/free-trial";
+const courseAPI = "https://isami-zone-project.onrender.com/all-courses";
+const allStudents = "https://isami-zone-project.onrender.com/all-students";
+const testimonialsURL = "https://isami-zone-project.onrender.com/testimonials";
+const allTeachers = "https://isami-zone-project.onrender.com/all-teachers";
+const freeTrials = "https://isami-zone-project.onrender.com/free-trial";
 
 const initialState = {
   isLoading: false,
