@@ -46,7 +46,7 @@ const Assignment = () => {
                 // Table for Admin (userID matches)
                 <table className="w-[100%] overflow-x-auto">
                   <thead>
-                    <tr className="bg-gray-200">
+                    <tr className="bg-gray-200 text-left">
                       <th className="p-3">Name</th>
                       <th className="p-3">Days</th>
                       <th className="p-3">Timing</th>
